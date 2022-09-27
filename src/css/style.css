@@ -1,0 +1,145 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "section section"
+    "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../images/bg-desktop.svg')center center no-repeat hsl(257, 40%, 49%);
+    background-size: cover; 
+    font-family: 'Outfit', sans-serif;   
+}
+
+@media (max-width: 425px){
+    body{
+    background: none;
+    }
+
+    body{
+        background: url('../images/bg-mobile.svg')center center no-repeat hsl(257, 40%, 49%);
+    }
+}
+
+header{
+    grid-area: header;
+    width: 100%; 
+}
+
+header .image-logo{
+    height: 52px;
+    margin: 55px 0px 35px 75px;
+}
+@media (max-width: 425px){
+    header .image-logo{
+        max-height: 35px;
+
+    }
+}
+
+section{
+    grid-area: section;
+    display: flex;
+    flex-wrap: wrap; 
+
+}
+
+section .image-section{
+    max-height: 619px;
+    margin-left: 35px;
+}
+section .container-info{
+    padding: 50px;
+    color: #fff;
+    max-width: 620px;
+}
+
+section .container-info h1{
+    font-size: 45px;    
+    font-weight: 600;
+    margin-bottom: 25px;    
+}
+
+section .container-info p{
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+
+section .container-info button{
+    font-size: 18px;
+    padding: 17px 65px;
+    border: 1px solid;
+    border-radius: 45px;
+    color: hsl(257, 40%, 49%);
+    transition: 0.3s;
+}
+
+section .container-info button:hover{
+    background-color: hsl(300, 69%, 71%);
+    
+}
+section .container-info button a{
+    transition: 0.3s;
+}
+
+section .container-info button a:hover{
+    color: #fff;
+}
+
+
+@media (max-width: 425px){
+    section .image-section{
+     max-height: 250px;
+     margin: 0 auto;
+    }
+}
+@media (max-width: 425px){
+    section .container-info h1{
+        font-size: 30px;
+    }
+    section .container-info p{
+        font-size: 15px;
+    }
+
+    section .container-info button{
+        align-items: center;
+        font-size: 15px;
+        padding: 12px 85px;
+        margin: 0 auto;
+    }
+}
+
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    text-align: end;
+    font-size: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-icon{
+    margin-right: 10%;    
+}
+
+.footer-icon a i{
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 50px;
+    color: #fff;
+}
+.footer-icon a i:hover{
+    color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 425px){
+   footer {
+    font-size: 12px;
+    text-align: center;       
+    margin-bottom: 19px;
+   }
+   footer .footer-icon a{
+    padding: 5px;
+   }
+}
